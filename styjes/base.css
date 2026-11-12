@@ -1,0 +1,155 @@
+:root {
+    --navy: #123047;
+    --navy-dark: #0b2233;
+    --gold: #f2c66d;
+    --page-bg: #f3f6f8;
+    --card-bg: #ffffff;
+    --text: #202a33;
+    --muted: #425563;
+    --border: #d4dee5;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background: var(--page-bg);
+    color: var(--text);
+    font-family: "DM Sans", sans-serif;
+    line-height: 1.6;
+}
+
+.site-header {
+    background: var(--navy);
+    color: #ffffff;
+}
+
+#course-title {
+    display: block;
+    padding: 1.25rem 1rem;
+    text-align: center;
+    font-family: "Merriweather", serif;
+    font-size: clamp(1.25rem, 3vw, 1.8rem);
+}
+
+nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.5rem;
+    padding: 0.75rem 1rem;
+    background: var(--navy-dark);
+}
+
+nav a {
+    display: block;
+    padding: 0.6rem 1rem;
+    border-radius: 0.3rem;
+    color: #ffffff;
+    text-decoration: none;
+    transition: background-color 160ms ease, color 160ms ease;
+}
+
+nav a:hover,
+nav a:focus-visible {
+    background-color: var(--gold);
+    color: var(--navy-dark);
+}
+
+nav a:focus-visible,
+.text-link:focus-visible {
+    outline: 3px solid #ffffff;
+    outline-offset: 3px;
+}
+
+main {
+    width: min(100% - 2rem, 1050px);
+    margin: 2rem auto;
+}
+
+h1 {
+    margin: 0 0 1.5rem;
+    color: var(--navy);
+    font-family: "Merriweather", serif;
+    font-size: clamp(1.8rem, 4vw, 2.4rem);
+    text-align: center;
+}
+
+.card-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1.5rem;
+}
+
+.card {
+    overflow: hidden;
+    border: 1px solid var(--border);
+    border-radius: 0.75rem;
+    background: var(--card-bg);
+    box-shadow: 0 4px 12px rgb(18 48 71 / 10%);
+}
+
+.card h2 {
+    margin: 0;
+    padding: 0.9rem 1.25rem;
+    background: var(--navy);
+    color: #ffffff;
+    font-family: "Merriweather", serif;
+    font-size: 1.25rem;
+    text-align: center;
+}
+
+.card-content {
+    padding: 1.25rem;
+}
+
+.card p {
+    margin: 0 0 1rem;
+}
+
+.card img {
+    display: block;
+    width: 100%;
+    height: auto;
+    max-height: 300px;
+    border-radius: 0.4rem;
+    object-fit: cover;
+}
+
+.text-link {
+    display: inline-block;
+    color: var(--navy);
+    font-weight: 700;
+    text-underline-offset: 0.2em;
+}
+
+.text-link:hover {
+    color: #7a4c00;
+}
+
+.site-footer {
+    padding: 1.25rem 1rem;
+    background: var(--navy-dark);
+    color: #ffffff;
+    text-align: center;
+}
+
+.site-footer p {
+    margin: 0.25rem;
+}
+
+@media (max-width: 700px) {
+    .card-grid {
+        grid-template-columns: 1fr;
+    }
+
+    nav {
+        gap: 0.25rem;
+    }
+
+    nav a {
+        padding: 0.55rem 0.75rem;
+    }
+}
