@@ -1,0 +1,134 @@
+:root {
+    --ink: #17313a;
+    --paper: #f5f3ed;
+    --surface: #ffffff;
+    --accent: #176b68;
+    --accent-dark: #104d4b;
+    --line: #d7dedb;
+    --shadow: 0 4px 14px rgb(23 49 58 / 10%);
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    color: var(--ink);
+    background: var(--paper);
+    font-family: "DM Sans", sans-serif;
+}
+
+.site-header {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.75rem;
+    padding: 1rem 1.25rem;
+    color: white;
+    background: var(--accent-dark);
+}
+
+.site-title {
+    font-family: "Playfair Display", serif;
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+.menu-button {
+    display: inline-grid;
+    place-items: center;
+    width: 2.75rem;
+    height: 2.75rem;
+    border: 1px solid rgb(255 255 255 / 60%);
+    border-radius: 0.4rem;
+    color: white;
+    background: transparent;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+.menu-button:hover,
+.menu-button:focus-visible {
+    background: rgb(255 255 255 / 15%);
+}
+
+.primary-navigation {
+    display: none;
+    flex-basis: 100%;
+    flex-direction: column;
+    gap: 0.25rem;
+}
+
+.primary-navigation.is-open {
+    display: flex;
+}
+
+.primary-navigation a {
+    padding: 0.75rem;
+    border-radius: 0.25rem;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+}
+
+.primary-navigation a:hover,
+.primary-navigation a:focus-visible,
+.primary-navigation a[aria-current="page"] {
+    background: rgb(255 255 255 / 18%);
+    text-decoration: underline;
+    text-underline-offset: 0.25rem;
+}
+
+.album {
+    width: min(100% - 2rem, 70rem);
+    margin: 0 auto;
+    padding: 1.5rem 0 2.5rem;
+}
+
+h1 {
+    margin: 0 0 1.25rem;
+    font-family: "Playfair Display", serif;
+    font-size: clamp(1.8rem, 7vw, 2.6rem);
+    text-align: center;
+}
+
+.temple-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+}
+
+figure {
+    margin: 0;
+    overflow: hidden;
+    border: 1px solid var(--line);
+    border-radius: 0.5rem;
+    background: var(--surface);
+    box-shadow: var(--shadow);
+}
+
+figure img {
+    display: block;
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+}
+
+figcaption {
+    padding: 0.85rem 1rem;
+    font-weight: 500;
+    text-align: center;
+}
+
+.site-footer {
+    padding: 1.25rem 1rem;
+    color: white;
+    background: var(--accent-dark);
+    text-align: center;
+}
+
+.site-footer p {
+    margin: 0.35rem 0;
+}
