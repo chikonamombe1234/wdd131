@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="A responsive album of temples from around the world.">
+  <meta name="author" content="Jonathan Hondoyedzomba">
+  <title>Temple Album | WDD 131</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles/temples.css">
+  <link rel="stylesheet" href="styles/temples-large.css">
+  <script src="scripts/temples.js" defer></script>
+</head>
+<body>
+  <header class="site-header">
+    <span class="site-title">Temple Album</span>
+
+    <button
+      class="menu-button"
+      type="button"
+      aria-label="Open navigation menu"
+      aria-expanded="false"
+      aria-controls="primary-navigation"
+    >
+      <span class="menu-icon" aria-hidden="true">☰</span>
+    </button>
+
+    <nav class="primary-navigation" id="primary-navigation" aria-label="Main navigation">
+      <a href="#" data-filter="all" aria-current="page">Home</a>
+      <a href="#" data-filter="old">Old</a>
+      <a href="#" data-filter="new">New</a>
+      <a href="#" data-filter="large">Large</a>
+      <a href="#" data-filter="small">Small</a>
+    </nav>
+  </header>
+
+  <main class="album">
+    <h1>Temples Around the World</h1>
+
+    <div class="temple-grid">
+      <figure data-categories="old large">
+        <img src="https://images.unsplash.com/photo-1564507592333-c60657eea523?auto=format&amp;fit=crop&amp;w=800&amp;q=75"
+             alt="Placeholder photograph of a grand white temple"
+             width="800" height="600" loading="lazy">
+        <figcaption>Taj Mahal — Agra, India</figcaption>
+      </figure>
+
+      <figure data-categories="new large">
+        <img src="https://images.unsplash.com/photo-1564507592333-c60657eea523?auto=format&amp;fit=crop&amp;w=800&amp;q=75"
+             alt="Placeholder photograph of a grand white temple"
+             width="800" height="600" loading="lazy">
+        <figcaption>Rome Italy Temple — Rome, Italy</figcaption>
+      </figure>
+
+      <figure data-categories="old large">
+        <img src="https://images.unsplash.com/photo-1564507592333-c60657eea523?auto=format&amp;fit=crop&amp;w=800&amp;q=75"
+             alt="Placeholder photograph of a grand white temple"
+             width="800" height="600" loading="lazy">
+        <figcaption>Salt Lake Temple — Salt Lake City, Utah</figcaption>
+      </figure>
+
+      <figure data-categories="new small">
+        <img src="https://images.unsplash.com/photo-1564507592333-c60657eea523?auto=format&amp;fit=crop&amp;w=800&amp;q=75"
+             alt="Placeholder photograph of a grand white temple"
+             width="800" height="600" loading="lazy">
+        <figcaption>Port-au-Prince Haiti Temple — Haiti</figcaption>
+      </figure>
+
+      <figure data-categories="old large">
+        <img src="https://images.unsplash.com/photo-1564507592333-c60657eea523?auto=format&amp;fit=crop&amp;w=800&amp;q=75"
+             alt="Placeholder photograph of a grand white temple"
+             width="800" height="600" loading="lazy">
+        <figcaption>Laie Hawaii Temple — Laie, Hawaii</figcaption>
+      </figure>
+
+      <figure data-categories="new large">
+        <img src="https://images.unsplash.com/photo-1564507592333-c60657eea523?auto=format&amp;fit=crop&amp;w=800&amp;q=75"
+             alt="Placeholder photograph of a grand white temple"
+             width="800" height="600" loading="lazy">
+        <figcaption>Durban South Africa Temple — Durban, South Africa</figcaption>
+      </figure>
+
+      <figure data-categories="old small">
+        <img src="https://images.unsplash.com/photo-1564507592333-c60657eea523?auto=format&amp;fit=crop&amp;w=800&amp;q=75"
+             alt="Placeholder photograph of a grand white temple"
+             width="800" height="600" loading="lazy">
+        <figcaption>Cardston Alberta Temple — Cardston, Canada</figcaption>
+      </figure>
+
+      <figure data-categories="new small">
+        <img src="https://images.unsplash.com/photo-1564507592333-c60657eea523?auto=format&amp;fit=crop&amp;w=800&amp;q=75"
+             alt="Placeholder photograph of a grand white temple"
+             width="800" height="600" loading="lazy">
+        <figcaption>Paris France Temple — Le Chesnay, France</figcaption>
+      </figure>
+
+      <figure data-categories="old large">
+        <img src="https://images.unsplash.com/photo-1564507592333-c60657eea523?auto=format&amp;fit=crop&amp;w=800&amp;q=75"
+             alt="Placeholder photograph of a grand white temple"
+             width="800" height="600" loading="lazy">
+        <figcaption>Provo Utah Temple — Provo, Utah</figcaption>
+      </figure>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <p>&copy; <span id="2026"></span> JONATHAN HONDOYEDZOMBA | KWEKWE, ZIMBABWE </p>
+    <p>WDD 131: Dynamic Web Fundamentals</p>
+    <p>Last modified: <span id="last-modified"></span></p>
+  </footer>
+</body>
+</html>
