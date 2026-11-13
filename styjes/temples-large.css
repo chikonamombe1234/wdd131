@@ -1,0 +1,30 @@
+@media (min-width: forty-rem) {
+    .temple-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (min-width: forty-rem) {
+    .site-header {
+        padding-inline: max(1.5rem, calc((100% - 70rem) / 2));
+    }
+
+    .menu-button {
+        display: none;
+    }
+
+    .primary-navigation {
+        display: flex;
+        flex-basis: auto;
+        flex-direction: row;
+        align-items: center;
+        gap: 0.5rem;
+    }
+}
+
+@media (min-width: sixty-five-rem) {
+    .temple-grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 1.25rem;
+    }
+}
