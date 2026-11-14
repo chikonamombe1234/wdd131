@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Discover Iceland, a land of glaciers, volcanoes, and northern lights.">
+  <meta name="author" content="Your Name">
+  <title>Iceland | A Place to Discover</title>
+  <link rel="stylesheet" href="styles/place.css">
+  <script src="scripts/place.js" defer></script>
+</head>
+<body>
+  <header class="site-header">
+    <p class="site-name">Discover Iceland</p>
+  </header>
+
+  <main>
+    <section class="hero" aria-labelledby="page-title">
+      <h1 id="page-title" class="visually-hidden">Iceland</h1>
+
+      <img
+        class="hero-image"
+        src="https://images.unsplash.com/photo-1531366936337-7c912a4589a7?fm=webp&amp;fit=crop&amp;w=1200&amp;q=85"
+        srcset="
+          https://images.unsplash.com/photo-1531366936337-7c912a4589a7?fm=webp&amp;fit=crop&amp;w=640&amp;q=85 640w,
+          https://images.unsplash.com/photo-1531366936337-7c912a4589a7?fm=webp&amp;fit=crop&amp;w=1200&amp;q=85 1200w,
+          https://images.unsplash.com/photo-1531366936337-7c912a4589a7?fm=webp&amp;fit=crop&amp;w=1920&amp;q=85 1920w"
+        sizes="100vw"
+        alt="Northern lights shining above an Icelandic landscape"
+        fetchpriority="high"
+      >
+
+      <section class="info-card data-card" aria-labelledby="data-heading">
+        <h2 id="data-heading">Country Data</h2>
+        <dl class="data-list">
+          <div><dt>Area:</dt><dd>103,000 km²</dd></div>
+          <div><dt>Population:</dt><dd>About 393,000</dd></div>
+          <div><dt>Capital:</dt><dd>Reykjavík</dd></div>
+          <div><dt>Languages:</dt><dd>Icelandic</dd></div>
+          <div><dt>Currency:</dt><dd>Icelandic króna</dd></div>
+          <div><dt>Time zone:</dt><dd>UTC</dd></div>
+          <div><dt>Calling code:</dt><dd>+354</dd></div>
+          <div><dt>Internet domain:</dt><dd>.is</dd></div>
+        </dl>
+      </section>
+
+      <section class="info-card weather-card" aria-labelledby="weather-heading">
+        <h2 id="weather-heading">Weather</h2>
+        <img class="weather-icon" src="images/weather.svg" alt="" aria-hidden="true">
+        <dl class="weather-list">
+          <div><dt>Conditions:</dt><dd>Partly cloudy</dd></div>
+          <div><dt>Temperature:</dt><dd><span id="temperature">2</span> °C</dd></div>
+          <div><dt>Wind:</dt><dd><span id="wind-speed">15</span> km/h</dd></div>
+          <div><dt>Wind chill:</dt><dd id="wind-chill">—</dd></div>
+        </dl>
+      </section>
+    </section>
+
+    <section class="intro" aria-label="About Iceland">
+      <p>
+        Iceland is an island nation in the North Atlantic, known for its dramatic
+        landscapes. Visitors can explore glaciers, waterfalls, volcanoes, hot
+        springs, and skies lit by the aurora borealis.
+      </p>
+      <p class="photo-credit">
+        Hero image: <a href="https://unsplash.com/" target="_blank" rel="noopener noreferrer">Unsplash</a>
+      </p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>© <span id="current-year"></span> Discover Iceland</p>
+    <p>Last modified: <span id="last-modified"></span></p>
+  </footer>
+</body>
+</html>
