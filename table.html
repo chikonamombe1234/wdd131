@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Account Feature Comparison</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      padding: 2rem 1rem;
+      font-family: Arial, sans-serif;
+      color: #243247;
+      background: #f4f7fb;
+    }
+
+    .table-wrap {
+      max-width: 900px;
+      margin: 0 auto;
+      overflow-x: auto;
+      border-radius: 12px;
+      box-shadow: 0 4px 16px rgb(31 49 74 / 10%);
+    }
+
+    table {
+      width: 100%;
+      min-width: 600px;
+      border-collapse: collapse;
+      background: #fff;
+      text-align: center;
+    }
+
+    caption {
+      padding: 1rem;
+      color: #fff;
+      background: #315a8c;
+      font-size: 1.25rem;
+      font-weight: bold;
+      text-align: left;
+    }
+
+    th,
+    td {
+      padding: 1rem;
+      border-bottom: 1px solid #dbe3ed;
+    }
+
+    thead th {
+      color: #fff;
+      background: #4779b5;
+    }
+
+    thead th:first-child,
+    tbody th {
+      text-align: left;
+    }
+
+    tbody tr:nth-child(even) {
+      background: #edf4fc;
+    }
+
+    tbody tr:hover {
+      background: #e0edfa;
+    }
+
+    .yes {
+      color: #18794e;
+      font-size: 1.2rem;
+    }
+
+    .no {
+      color: #b42318;
+      font-size: 1.2rem;
+    }
+  </style>
+</head>
+<body>
+  <div class="table-wrap">
+    <table>
+      <caption>Table 1: Account Feature Comparison</caption>
+      <thead>
+        <tr>
+          <th scope="col">Feature</th>
+          <th scope="col">Basic</th>
+          <th scope="col">Pro</th>
+          <th scope="col">Business</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th scope="row">Custom dashboard</th>
+          <td><span class="yes" aria-label="Included">✔️</span></td>
+          <td><span class="yes" aria-label="Included">✔️</span></td>
+          <td><span class="yes" aria-label="Included">✔️</span></td>
+        </tr>
+        <tr>
+          <th scope="row">Advanced analytics</th>
+          <td><span class="no" aria-label="Not included">❌</span></td>
+          <td><span class="yes" aria-label="Included">✔️</span></td>
+          <td><span class="yes" aria-label="Included">✔️</span></td>
+        </tr>
+        <tr>
+          <th scope="row">Team collaboration</th>
+          <td><span class="no" aria-label="Not included">❌</span></td>
+          <td><span class="yes" aria-label="Included">✔️</span></td>
+          <td><span class="yes" aria-label="Included">✔️</span></td>
+        </tr>
+        <tr>
+          <th scope="row">Priority support</th>
+          <td><span class="no" aria-label="Not included">❌</span></td>
+          <td><span class="no" aria-label="Not included">❌</span></td>
+          <td><span class="yes" aria-label="Included">✔️</span></td>
+        </tr>
+        <tr>
+          <th scope="row">API access</th>
+          <td><span class="no" aria-label="Not included">❌</span></td>
+          <td><span class="yes" aria-label="Included">✔️</span></td>
+          <td><span class="yes" aria-label="Included">✔️</span></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</body>
+</html>
