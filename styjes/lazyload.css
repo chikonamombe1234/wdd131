@@ -1,0 +1,53 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 1.5rem 1rem;
+  color: #222;
+  background: #f3f3f3;
+  font-family: Arial, sans-serif;
+}
+
+main {
+  width: 100%;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+h1 {
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+main img {
+  display: block;
+  width: min(100%, 400px);
+  height: auto;
+  margin: 0 auto 1.5rem;
+  background-color: #000;
+}
+
+/* The black background shows through while the image fades in. */
+main img.is-loaded {
+  animation: fade-from-black 1.2s ease-out both;
+}
+
+@keyframes fade-from-black {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+footer {
+  margin-top: 2rem;
+  padding: 1rem;
+  color: #fff;
+  background: #333;
+  text-align: center;
+}
