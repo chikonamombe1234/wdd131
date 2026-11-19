@@ -1,65 +1,155 @@
-const menuButton = document.querySelector(".menu-button");
-const navigation = document.querySelector(".primary-navigation");
-const menuIcon = document.querySelector(".menu-icon");
-const filterLinks = document.querySelectorAll(".primary-navigation a");
-const templeFigures = document.querySelectorAll(".temple-grid figure");
-
-if (menuButton && navigation && menuIcon) {
-  menuButton.addEventListener("click", () => {
-    const isOpen = menuButton.getAttribute("aria-expanded") === "true";
-    const shouldOpen = !isOpen;
-
-    menuButton.setAttribute("aria-expanded", String(shouldOpen));
-    menuButton.setAttribute(
-      "aria-label",
-      shouldOpen ? "Close navigation menu" : "Open navigation menu"
-    );
-
-    menuIcon.textContent = shouldOpen ? "×" : "☰";
-    navigation.classList.toggle("is-open", shouldOpen);
-  });
+:root {
+  --ink: #17313a;
+  --paper: #f5f3ed;
+  --surface: #ffffff;
+  --accent: #176b68;
+  --accent-dark: #104d4b;
+  --line: #d7dedb;
+  --shadow: 0 4px 14px rgb(23 49 58 / 10%);
 }
 
-filterLinks.forEach((link) => {
-  link.addEventListener("click", (event) => {
-    event.preventDefault();
-
-    const selectedFilter = link.dataset.filter;
-
-    filterLinks.forEach((item) => item.removeAttribute("aria-current"));
-    link.setAttribute("aria-current", "page");
-
-    templeFigures.forEach((figure) => {
-      const categories = figure.dataset.categories.split(" ");
-      const shouldShow =
-        selectedFilter === "all" || categories.includes(selectedFilter);
-
-      figure.hidden = !shouldShow;
-    });
-
-    navigation.classList.remove("is-open");
-
-    if (menuButton && menuIcon) {
-      menuButton.setAttribute("aria-expanded", "false");
-      menuButton.setAttribute("aria-label", "Open navigation menu");
-      menuIcon.textContent = "☰";
-    }
-  });
-});
-
-const yearElement = document.querySelector("#current-year");
-if (yearElement) {
-  yearElement.textContent = new Date().getFullYear();
+* {
+  box-sizing: border-box;
 }
 
-const modifiedElement = document.querySelector("#last-modified");
-if (modifiedElement) {
-  const modifiedDate = new Date(document.lastModified);
+body {
+  margin: 0;
+  color: var(--ink);
+  background: var(--paper);
+  font-family: "DM Sans", sans-serif;
+}
 
-  modifiedElement.textContent = Number.isNaN(modifiedDate.getTime())
-    ? "Unavailable"
-    : new Intl.DateTimeFormat("en", {
-        dateStyle: "long",
-        timeStyle: "short"
-      }).format(modifiedDate);
+.site-header {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+  padding: 1rem 1.25rem;
+  color: #fff;
+  background: var(--accent-dark);
+}
+
+.site-title {
+  font-family: "Playfair Display", serif;
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.menu-button {
+  display: inline-grid;
+  place-items: center;
+  width: 2.75rem;
+  height: 2.75rem;
+  border: 1px solid rgb(255 255 255 / 60%);
+  border-radius: 0.4rem;
+  color: #fff;
+  background: transparent;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+.menu-button:hover,
+.menu-button:focus-visible {
+  background: rgb(255 255 255 / 15%);
+}
+
+.primary-navigation {
+  display: none;
+  flex-basis: 100%;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.primary-navigation.is-open {
+  display: flex;
+}
+
+.primary-navigation a {
+  padding: 0.75rem;
+  border-radius: 0.25rem;
+  color: #fff;
+  text-align: center;
+  text-decoration: none;
+}
+
+.primary-navigation a:hover,
+.primary-navigation a:focus-visible,
+.primary-navigation a[aria-current="page"] {
+  background: rgb(255 255 255 / 18%);
+  text-decoration: underline;
+  text-underline-offset: 0.25rem;
+}
+
+.album {
+  width: min(100% - 2rem, 70rem);
+  margin: 0 auto;
+  padding: 1.5rem 0 2.5rem;
+}
+
+h1 {
+  margin: 0 0 1.25rem;
+  font-family: "Playfair Display", serif;
+  font-size: clamp(1.8rem, 7vw, 2.6rem);
+  text-align: center;
+}
+
+.temple-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 15rem), 1fr));
+  gap: 1rem;
+}
+
+figure {
+  margin: 0;
+  overflow: hidden;
+  border: 1px solid var(--line);
+  border-radius: 0.5rem;
+  background: var(--surface);
+  box-shadow: var(--shadow);
+}
+
+figure[hidden] {
+  display: none;
+}
+
+figure img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+}
+
+figcaption {
+  padding: 0.85rem 1rem;
+  font-weight: 500;
+  text-align: center;
+}
+
+.site-footer {
+  padding: 1.25rem 1rem;
+  color: #fff;
+  background: var(--accent-dark);
+  text-align: center;
+}
+
+.site-footer p {
+  margin: 0.35rem 0;
+}
+
+@media (min-width: 48rem) {
+  .site-header {
+    flex-wrap: nowrap;
+  }
+
+  .menu-button {
+    display: none;
+  }
+
+  .primary-navigation {
+    display: flex;
+    flex-basis: auto;
+    flex-direction: row;
+    justify-content: flex-end;
+  }
 }
