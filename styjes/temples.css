@@ -26,7 +26,7 @@ body {
     justify-content: space-between;
     gap: 0.75rem;
     padding: 1rem 1.25rem;
-    color: white;
+    color: #fff;
     background: var(--accent-dark);
 }
 
@@ -43,7 +43,7 @@ body {
     height: 2.75rem;
     border: 1px solid rgb(255 255 255 / 60%);
     border-radius: 0.4rem;
-    color: white;
+    color: #fff;
     background: transparent;
     font-size: 1.5rem;
     cursor: pointer;
@@ -68,7 +68,7 @@ body {
 .primary-navigation a {
     padding: 0.75rem;
     border-radius: 0.25rem;
-    color: white;
+    color: #fff;
     text-align: center;
     text-decoration: none;
 }
@@ -96,7 +96,7 @@ h1 {
 
 .temple-grid {
     display: grid;
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 15rem), 1fr));
     gap: 1rem;
 }
 
@@ -107,6 +107,10 @@ figure {
     border-radius: 0.5rem;
     background: var(--surface);
     box-shadow: var(--shadow);
+}
+
+figure[hidden] {
+    display: none;
 }
 
 figure img {
@@ -124,11 +128,28 @@ figcaption {
 
 .site-footer {
     padding: 1.25rem 1rem;
-    color: white;
+    color: #fff;
     background: var(--accent-dark);
     text-align: center;
 }
 
 .site-footer p {
     margin: 0.35rem 0;
+}
+
+@media (min-width: 48rem) {
+    .site-header {
+        flex-wrap: nowrap;
+    }
+
+    .menu-button {
+        display: none;
+    }
+
+    .primary-navigation {
+        display: flex;
+        flex-basis: auto;
+        flex-direction: row;
+        justify-content: flex-end;
+    }
 }
