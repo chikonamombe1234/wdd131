@@ -4,50 +4,62 @@ const menuIcon = document.querySelector(".menu-icon");
 const filterLinks = document.querySelectorAll(".primary-navigation a");
 const templeFigures = document.querySelectorAll(".temple-grid figure");
 
-menuButton.addEventListener("click", () => {
-  const isOpen = menuButton.getAttribute("aria-expanded") === "true";
+if (menuButton && navigation && menuIcon) {
+    menuButton.addEventListener("click", () => {
+        const isOpen = menuButton.getAttribute("aria-expanded") === "true";
+        const shouldOpen = !isOpen;
 
-  menuButton.setAttribute("aria-expanded", String(!isOpen));
-  menuButton.setAttribute(
-    "aria-label",
-    isOpen ? "Open navigation menu" : "Close navigation menu"
-  );
-  menuIcon.textContent = isOpen ? "☰" : "×";
-  navigation.classList.toggle("is-open", !isOpen);
-});
+        menuButton.setAttribute("aria-expanded", String(shouldOpen));
+        menuButton.setAttribute(
+            "aria-label",
+            shouldOpen ? "Close navigation menu" : "Open navigation menu"
+        );
+
+        menuIcon.textContent = shouldOpen ? "×" : "☰";
+        navigation.classList.toggle("is-open", shouldOpen);
+    });
+}
 
 filterLinks.forEach((link) => {
-  link.addEventListener("click", (event) => {
-    event.preventDefault();
+    link.addEventListener("click", (event) => {
+        event.preventDefault();
 
-    const selectedFilter = link.dataset.filter;
+        const selectedFilter = link.dataset.filter;
 
-    filterLinks.forEach((item) => item.removeAttribute("aria-current"));
-    link.setAttribute("aria-current", "page");
+        filterLinks.forEach((item) => item.removeAttribute("aria-current"));
+        link.setAttribute("aria-current", "page");
 
-    templeFigures.forEach((figure) => {
-      const categories = figure.dataset.categories.split(" ");
-      const shouldShow =
-        selectedFilter === "all" || categories.includes(selectedFilter);
+        templeFigures.forEach((figure) => {
+            const categories = figure.dataset.categories.split(" ");
+            const shouldShow =
+                selectedFilter === "all" || categories.includes(selectedFilter);
 
-      figure.hidden = !shouldShow;
+            figure.hidden = !shouldShow;
+        });
+
+        navigation.classList.remove("is-open");
+
+        if (menuButton && menuIcon) {
+            menuButton.setAttribute("aria-expanded", "false");
+            menuButton.setAttribute("aria-label", "Open navigation menu");
+            menuIcon.textContent = "☰";
+        }
     });
-
-    navigation.classList.remove("is-open");
-    menuButton.setAttribute("aria-expanded", "false");
-    menuButton.setAttribute("aria-label", "Open navigation menu");
-    menuIcon.textContent = "☰";
-  });
 });
 
-document.querySelector("#current-year").textContent =
-  new Date().getFullYear();
+const yearElement = document.querySelector("#current-year");
+if (yearElement) {
+    yearElement.textContent = new Date().getFullYear();
+}
 
-const modifiedDate = new Date(document.lastModified);
-document.querySelector("#last-modified").textContent =
-  Number.isNaN(modifiedDate.getTime())
-    ? "Unavailable"
-    : new Intl.DateTimeFormat("en", {
-        dateStyle: "long",
-        timeStyle: "short"
-      }).format(modifiedDate);
+const modifiedElement = document.querySelector("#last-modified");
+if (modifiedElement) {
+    const modifiedDate = new Date(document.lastModified);
+
+    modifiedElement.textContent = Number.isNaN(modifiedDate.getTime())
+        ? "Unavailable"
+        : new Intl.DateTimeFormat("en", {
+            dateStyle: "long",
+            timeStyle: "short"
+        }).format(modifiedDate);
+}
