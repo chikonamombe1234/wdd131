@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta
+    name="description"
+    content="Website planning document for Discover Kyoto, a visitor-information website about Kyoto, Japan."
+  >
+  <meta name="author" content="Your Name">
+  <title>Discover Kyoto | Website Plan</title>
+  <link rel="stylesheet" href="styles/siteplan.css">
+</head>
+
+<body>
+  <header class="site-header">
+    <a class="brand" href="#top" aria-label="Discover Kyoto website plan home">
+      <span class="brand-mark" aria-hidden="true">京</span>
+      <span>Discover Kyoto</span>
+    </a>
+    <p class="document-label">Website Planning Document</p>
+  </header>
+
+  <main id="top">
+    <section class="intro">
+      <p class="eyebrow">WDD 131 · Project Plan</p>
+      <h1>Discover Kyoto</h1>
+      <p>
+        A friendly starting point for visitors planning a trip to Kyoto, Japan.
+        This plan outlines the intended content, visual style, and home-page layout.
+      </p>
+    </section>
+
+    <section class="plan-section" aria-labelledby="site-name-heading">
+      <h2 id="site-name-heading">Site Name</h2>
+      <h3>Discover Kyoto</h3>
+      <p>
+        “Discover Kyoto” is a clear, memorable name for a site introducing visitors
+        to the city. It suggests exploring Kyoto’s landmarks, traditions, food,
+        and practical travel information.
+      </p>
+      <p><strong>Proposed domain:</strong> discover-kyoto.example</p>
+      <p class="note">
+        The example domain is a placeholder; domain registration is not required
+        for this assignment.
+      </p>
+    </section>
+
+    <section class="plan-section" aria-labelledby="purpose-heading">
+      <h2 id="purpose-heading">Site Purpose</h2>
+      <p>
+        The site will help first-time visitors learn about Kyoto and plan a
+        rewarding visit. It will provide a brief city introduction, suggestions
+        for notable places to visit, cultural and food highlights, and practical
+        travel tips. The home page will use clear sections and links to make
+        information easy to find on both mobile and desktop screens.
+      </p>
+    </section>
+
+    <section class="plan-section" aria-labelledby="scenarios-heading">
+      <h2 id="scenarios-heading">Scenarios</h2>
+      <p>Questions a visitor to the site might ask include:</p>
+      <ul>
+        <li>Which well-known Kyoto landmarks should I visit during a short trip?</li>
+        <li>What local foods should I try while I am in Kyoto?</li>
+        <li>How can I get around the city using public transportation?</li>
+        <li>What customs should I know before visiting temples and shrines?</li>
+      </ul>
+    </section>
+
+    <section class="plan-section" aria-labelledby="colors-heading">
+      <h2 id="colors-heading">Color Schema</h2>
+      <p>
+        The palette pairs deep indigo and warm ivory with a vermilion accent,
+        drawing inspiration from traditional Japanese design. The page background
+        and body text use high-contrast colors for comfortable reading.
+      </p>
+
+      <div class="swatches" aria-label="Selected website colors">
+        <div class="swatch">
+          <span class="swatch-color indigo" aria-hidden="true"></span>
+          <strong>Indigo</strong>
+          <code>#203A5A</code>
+          <span>Header, headings, and footer</span>
+        </div>
+        <div class="swatch">
+          <span class="swatch-color ivory" aria-hidden="true"></span>
+          <strong>Warm ivory</strong>
+          <code>#F7F3EA</code>
+          <span>Page background and light panels</span>
+        </div>
+        <div class="swatch">
+          <span class="swatch-color vermilion" aria-hidden="true"></span>
+          <strong>Vermilion</strong>
+          <code>#B84432</code>
+          <span>Links, buttons, and small accents</span>
+        </div>
+        <div class="swatch">
+          <span class="swatch-color charcoal" aria-hidden="true"></span>
+          <strong>Charcoal</strong>
+          <code>#252525</code>
+          <span>Paragraph text on light backgrounds</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="plan-section" aria-labelledby="type-heading">
+      <h2 id="type-heading">Typography</h2>
+      <p>
+        The site plan uses two typefaces. <strong class="sample-heading">Lora</strong>
+        is used for headings to give them a distinctive, editorial feel.
+        <strong class="sample-body">Open Sans</strong> is used for body copy and
+        interface text because it is easy to read at different screen sizes.
+      </p>
+      <ul>
+        <li><strong>Lora:</strong> page title and section headings</li>
+        <li><strong>Open Sans:</strong> paragraphs, navigation, labels, and buttons</li>
+      </ul>
+    </section>
+
+    <section class="plan-section" aria-labelledby="wireframes-heading">
+      <h2 id="wireframes-heading">Home Page Wireframes</h2>
+      <p>
+        The home page will introduce Kyoto, highlight key visitor information,
+        and direct users to more detailed content. These simplified diagrams show
+        the planned content order and layout.
+      </p>
+
+      <div class="wireframes">
+        <figure class="wireframe-figure">
+          <figcaption>Mobile view</figcaption>
+          <div class="wireframe mobile-wireframe" aria-label="Mobile home page wireframe">
+            <div class="wf-box wf-header">Logo / Menu</div>
+            <div class="wf-box wf-hero">Hero image<br>Page title</div>
+            <div class="wf-box">Welcome / Introduction</div>
+            <div class="wf-box">Featured places</div>
+            <div class="wf-box">Culture and food</div>
+            <div class="wf-box">Travel tips</div>
+            <div class="wf-box wf-footer">Footer / Contact</div>
+          </div>
+        </figure>
+
+        <figure class="wireframe-figure">
+          <figcaption>Desktop view</figcaption>
+          <div class="wireframe desktop-wireframe" aria-label="Desktop home page wireframe">
+            <div class="wf-box wf-header">Logo <span>Navigation links</span></div>
+            <div class="wf-box wf-hero">Wide hero image and page title</div>
+            <div class="wf-box wf-intro">Welcome / Introduction</div>
+            <div class="wf-row">
+              <div class="wf-box">Featured place 1</div>
+              <div class="wf-box">Featured place 2</div>
+              <div class="wf-box">Featured place 3</div>
+            </div>
+            <div class="wf-row">
+              <div class="wf-box">Culture and food</div>
+              <div class="wf-box">Travel tips</div>
+            </div>
+            <div class="wf-box wf-footer">Footer / Contact / Copyright</div>
+          </div>
+        </figure>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>Discover Kyoto · WDD 131 Website Plan</p>
+  </footer>
+</body>
+</html>
