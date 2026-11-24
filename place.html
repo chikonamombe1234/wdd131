@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Discover Iceland, its landscapes, and the weather in Reykjavík.">
+    <title>Iceland | WDD 131</title>
+    <link rel="stylesheet" href="styles/place.css">
+    <script src="scripts/place.js" defer></script>
+</head>
+
+<body>
+    <header class="site-header">
+        <h1 class="site-name">Iceland</h1>
+    </header>
+
+    <main>
+        <section class="hero" aria-label="Iceland facts and weather">
+            <picture class="hero-picture">
+                <source media="(max-width: 799px)" srcset="images/iceland-mobile.webp" type="image/webp">
+                <img class="hero-image" src="data:image/jpeg;base64,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"
+                    alt="Icelandic landscape with mountains, a waterfall, and open sky">
+            </picture>
+
+            <section class="info-card data-card" aria-labelledby="data-heading">
+                <h2 id="data-heading">About Iceland</h2>
+                <dl class="data-list">
+                    <div>
+                        <dt>Capital:</dt>
+                        <dd>Reykjavík</dd>
+                    </div>
+                    <div>
+                        <dt>Area:</dt>
+                        <dd>103,000 km²</dd>
+                    </div>
+                    <div>
+                        <dt>Population:</dt>
+                        <dd>About 393,000</dd>
+                    </div>
+                    <div>
+                        <dt>Language:</dt>
+                        <dd>Icelandic</dd>
+                    </div>
+                    <div>
+                        <dt>Currency:</dt>
+                        <dd>Icelandic króna</dd>
+                    </div>
+                </dl>
+            </section>
+
+            <section class="info-card weather-card" aria-labelledby="weather-heading">
+                <h2 id="weather-heading">Weather</h2>
+                <img class="weather-icon" src="images/weather.svg" alt="" aria-hidden="true">
+                <dl class="weather-list">
+                    <div>
+                        <dt>Condition:</dt>
+                        <dd>Partly cloudy</dd>
+                    </div>
+                    <div>
+                        <dt>Temperature:</dt>
+                        <dd><span id="temperature">2</span> °C</dd>
+                    </div>
+                    <div>
+                        <dt>Wind speed:</dt>
+                        <dd><span id="wind-speed">15</span> km/h</dd>
+                    </div>
+                    <div>
+                        <dt>Wind chill:</dt>
+                        <dd id="wind-chill">N/A</dd>
+                    </div>
+                </dl>
+            </section>
+        </section>
+
+        <section class="intro" aria-labelledby="intro-heading">
+            <h2 id="intro-heading">Discover Iceland</h2>
+            <p>
+                Iceland is an island nation in the North Atlantic known for its
+                volcanoes, glaciers, waterfalls, and geothermal hot springs. Reykjavík,
+                the country's capital, is its largest city and a popular starting point
+                for exploring the island.
+            </p>
+            <p class="photo-credit">
+                Photo: Add the photographer and image-source credit here if required by
+                the image license.
+            </p>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <p>Copyright © <span id="current-year"></span> | Iceland</p>
+        <p>Last modified: <span id="last-modified"></span></p>
+    </footer>
+</body>
+
+</html>
