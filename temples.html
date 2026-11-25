@@ -1,11 +1,11 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="A responsive album of temples of The Church of Jesus Christ of Latter-day Saints.">
-  <meta name="author" content="Jonathan Hondoyedzomba">
-  <title>Temple Album | Your Name</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="A responsive album of temples from around the world.">
+  <meta name="author" content="YOUR NAME">
+  <title>Temple Album | WDD 131</title>
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -17,89 +17,99 @@
 </head>
 <body>
   <header class="site-header">
-    <div class="header-inner">
-      <a class="site-title" href="temples.html">Temple Album</a>
+    <span class="site-title">Temple Album</span>
 
-      <button
-        class="menu-button"
-        type="button"
-        aria-label="Open navigation menu"
-        aria-expanded="false"
-        aria-controls="primary-navigation">
-        <span class="menu-icon" aria-hidden="true">☰</span>
-      </button>
+    <button
+      class="menu-button"
+      type="button"
+      aria-label="Open navigation menu"
+      aria-expanded="false"
+      aria-controls="primary-navigation"
+    >
+      <span class="menu-icon" aria-hidden="true">☰</span>
+    </button>
 
-      <nav id="primary-navigation" class="primary-navigation" aria-label="Main navigation">
-        <ul class="nav-links">
-          <li><a href="#gallery" data-filter="all" aria-current="page">Home</a></li>
-          <li><a href="#gallery" data-filter="old">Old</a></li>
-          <li><a href="#gallery" data-filter="new">New</a></li>
-          <li><a href="#gallery" data-filter="large">Large</a></li>
-          <li><a href="#gallery" data-filter="small">Small</a></li>
-        </ul>
-      </nav>
-    </div>
+    <nav class="primary-navigation" id="primary-navigation" aria-label="Main navigation">
+      <a href="#" data-filter="all" aria-current="page">Home</a>
+      <a href="#" data-filter="old">Old</a>
+      <a href="#" data-filter="new">New</a>
+      <a href="#" data-filter="large">Large</a>
+      <a href="#" data-filter="small">Small</a>
+    </nav>
   </header>
 
-  <main id="gallery" class="page-main">
-    <h1 class="gallery-title">Temple Album</h1>
+  <main class="album">
+    <h1>Temples Around the World</h1>
 
     <div class="temple-grid">
-      <figure class="temple-card" data-categories="old large">
-        <img src="images/temple-1.webp" alt="Exterior view of the Salt Lake Temple" width="800" height="600">
-        <figcaption>Salt Lake Temple</figcaption>
+      <figure data-categories="old large">
+        <img src="https://images.unsplash.com/photo-1564507592333-c60657eea523?auto=format&amp;fit=crop&amp;w=800&amp;q=75"
+             alt="Placeholder photograph of a grand white temple"
+             width="800" height="600" loading="lazy">
+        <figcaption>Taj Mahal — Agra, India</figcaption>
       </figure>
 
-      <figure class="temple-card" data-categories="old large">
-        <img src="images/temple-2.webp" alt="Exterior view of the Manti Utah Temple" width="800" height="600">
-        <figcaption>Manti Utah Temple</figcaption>
+      <figure data-categories="new large">
+        <img src="https://images.unsplash.com/photo-1564507592333-c60657eea523?auto=format&amp;fit=crop&amp;w=800&amp;q=75"
+             alt="Placeholder photograph of a grand white temple"
+             width="800" height="600" loading="lazy">
+        <figcaption>Rome Italy Temple — Rome, Italy</figcaption>
       </figure>
 
-      <figure class="temple-card" data-categories="old small">
-        <img src="images/temple-3.webp" alt="Exterior view of the Laie Hawaii Temple" width="800" height="600">
-        <figcaption>Laie Hawaii Temple</figcaption>
+      <figure data-categories="old large">
+        <img src="https://images.unsplash.com/photo-1564507592333-c60657eea523?auto=format&amp;fit=crop&amp;w=800&amp;q=75"
+             alt="Placeholder photograph of a grand white temple"
+             width="800" height="600" loading="lazy">
+        <figcaption>Salt Lake Temple — Salt Lake City, Utah</figcaption>
       </figure>
 
-      <figure class="temple-card" data-categories="new large">
-        <img src="images/temple-4.webp" alt="Exterior view of the Rome Italy Temple" width="800" height="600">
-        <figcaption>Rome Italy Temple</figcaption>
+      <figure data-categories="new small">
+        <img src="https://images.unsplash.com/photo-1564507592333-c60657eea523?auto=format&amp;fit=crop&amp;w=800&amp;q=75"
+             alt="Placeholder photograph of a grand white temple"
+             width="800" height="600" loading="lazy">
+        <figcaption>Port-au-Prince Haiti Temple — Haiti</figcaption>
       </figure>
 
-      <figure class="temple-card" data-categories="new large">
-        <img src="images/temple-5.webp" alt="Exterior view of the Paris France Temple" width="800" height="600">
-        <figcaption>Paris France Temple</figcaption>
+      <figure data-categories="old large">
+        <img src="https://images.unsplash.com/photo-1564507592333-c60657eea523?auto=format&amp;fit=crop&amp;w=800&amp;q=75"
+             alt="Placeholder photograph of a grand white temple"
+             width="800" height="600" loading="lazy">
+        <figcaption>Laie Hawaii Temple — Laie, Hawaii</figcaption>
       </figure>
 
-      <figure class="temple-card" data-categories="new small">
-        <img src="images/temple-6.webp" alt="Exterior view of the Lisbon Portugal Temple" width="800" height="600">
-        <figcaption>Lisbon Portugal Temple</figcaption>
+      <figure data-categories="new large">
+        <img src="https://images.unsplash.com/photo-1564507592333-c60657eea523?auto=format&amp;fit=crop&amp;w=800&amp;q=75"
+             alt="Placeholder photograph of a grand white temple"
+             width="800" height="600" loading="lazy">
+        <figcaption>Durban South Africa Temple — Durban, South Africa</figcaption>
       </figure>
 
-      <figure class="temple-card" data-categories="old large">
-        <img src="images/temple-7.webp" alt="Exterior view of the Cardston Alberta Temple" width="800" height="600">
-        <figcaption>Cardston Alberta Temple</figcaption>
+      <figure data-categories="old small">
+        <img src="https://images.unsplash.com/photo-1564507592333-c60657eea523?auto=format&amp;fit=crop&amp;w=800&amp;q=75"
+             alt="Placeholder photograph of a grand white temple"
+             width="800" height="600" loading="lazy">
+        <figcaption>Cardston Alberta Temple — Cardston, Canada</figcaption>
       </figure>
 
-      <figure class="temple-card" data-categories="new small">
-        <img src="images/temple-8.webp" alt="Exterior view of the Durban South Africa Temple" width="800" height="600">
-        <figcaption>Durban South Africa Temple</figcaption>
+      <figure data-categories="new small">
+        <img src="https://images.unsplash.com/photo-1564507592333-c60657eea523?auto=format&amp;fit=crop&amp;w=800&amp;q=75"
+             alt="Placeholder photograph of a grand white temple"
+             width="800" height="600" loading="lazy">
+        <figcaption>Paris France Temple — Le Chesnay, France</figcaption>
       </figure>
 
-      <figure class="temple-card" data-categories="new large">
-        <img src="images/temple-9.webp" alt="Exterior view of the Washington D.C. Temple" width="800" height="600">
-        <figcaption>Washington D.C. Temple</figcaption>
+      <figure data-categories="old large">
+        <img src="https://images.unsplash.com/photo-1564507592333-c60657eea523?auto=format&amp;fit=crop&amp;w=800&amp;q=75"
+             alt="Placeholder photograph of a grand white temple"
+             width="800" height="600" loading="lazy">
+        <figcaption>Provo Utah Temple — Provo, Utah</figcaption>
       </figure>
     </div>
   </main>
 
   <footer class="site-footer">
-    <p>
-      Copyright &copy; <span id="current-year"></span>
-      <span class="footer-separator">|</span>
-      Your Name
-      <span class="footer-separator">|</span>
-      Idaho, United States
-    </p>
+    <p>&copy; <span id="current-year"></span> YOUR NAME | YOUR LOCATION</p>
+    <p>WDD 131: Dynamic Web Fundamentals</p>
     <p>Last modified: <span id="last-modified"></span></p>
   </footer>
 </body>
