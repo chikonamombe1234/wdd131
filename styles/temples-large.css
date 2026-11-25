@@ -1,0 +1,41 @@
+@media (min-width: 600px) {
+  .header-inner {
+    flex-wrap: nowrap;
+  }
+
+  .menu-button {
+    display: none;
+  }
+
+  .primary-navigation {
+    flex-basis: auto;
+  }
+
+  .nav-links,
+  .nav-links.is-open {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 0.25rem;
+  }
+
+  .nav-links a {
+    padding: 0.65rem 0.75rem;
+  }
+
+  .temple-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1.5rem;
+  }
+
+  .gallery-title {
+    margin-bottom: 1.75rem;
+    font-size: 2.5rem;
+  }
+}
+
+@media (min-width: 900px) {
+  .temple-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
